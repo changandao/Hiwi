@@ -1,0 +1,11 @@
+﻿Der Buildvorgang wurde am 08.02.2018 15:48:40 gestartet.
+     1>Projekt "C:\Users\prakti1\Desktop\LogParams\LogParams\LogParams.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\MicrosoftVisualStudio2012\VC\bin\CL.exe /c /I"F:\ptc\proe_versions\Creo3.0\M130\Creo 3.0\M130\Common Files\protoolkit\includes" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D BUNG1_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\prakti1\desktop\logparams\logparams\main.cpp(2): fatal error C1083: Datei (Include) kann nicht geöffnet werden: "ProToolkit.h": No such file or directory
+     1>Die Erstellung des Projekts "C:\Users\prakti1\Desktop\LogParams\LogParams\LogParams.vcxproj" ist abgeschlossen, Build Ziel(e) -- FEHLER.
+
+Fehler beim Buildvorgang.
+
+Verstrichene Zeit 00:00:00.41

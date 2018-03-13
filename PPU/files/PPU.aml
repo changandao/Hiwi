@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile FileName="PPU.aml" SchemaVersion="2.15">
+	<InstanceHierarchy Name="PPU">
+		<InternalElement Name="Kran">
+			<Attribute Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>-10.1790</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>-492.950</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>805.050</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+		</InternalElement>
+		<InternalElement Name="Stapel">
+			<Attribute Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>1400.000</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+		</InternalElement>
+		<InternalElement Name="Stempel">
+			<Attribute Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>-700.000</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>700.000</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+		</InternalElement>
+		<InternalElement Name="Montageplatte">
+			<Attribute Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+		</InternalElement>	
+		<InternalElement Name="Sortierstrecke">
+				<Attribute Name="Frame">
+					<Attribute Name="x" AttributeDataType="xs:double">
+						<Value>-72.831000</Value>
+					</Attribute>
+					<Attribute Name="y" AttributeDataType="xs:double">
+						<Value>473.93000</Value>
+					</Attribute>
+					<Attribute Name="z" AttributeDataType="xs:double">
+						<Value>801.9000</Value>
+					</Attribute>
+					<Attribute Name="rx" AttributeDataType="xs:double">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="ry" AttributeDataType="xs:double">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="rz" AttributeDataType="xs:double">
+						<Value>0</Value>
+					</Attribute>
+				</Attribute>
+		</InternalElement>	
+	</InstanceHierarchy>
+</CAEXFile>

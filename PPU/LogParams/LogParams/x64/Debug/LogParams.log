@@ -1,0 +1,14 @@
+﻿Der Buildvorgang wurde am 09.03.2018 13:48:14 gestartet.
+     1>Projekt "E:\cad_Li\PPU\LogParams\LogParams\LogParams.vcxproj" auf Knoten "2", Build Ziel(e).
+     1>Link:
+         C:\Program Files (x86)\MicrosoftVisualStudio2012\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\cad_Li\PPU\LogParams\x64\Debug\LogParams.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"E:\cad_Li\PPU\LogParams\xerces-c-3.1.1\lib" /LIBPATH:"F:\ptc\proe_versions\Creo3.0\M100\Creo 3.0\M100\Common Files\protoolkit\x86e_win64\obj" "xerces-c_3.lib" protk_dll.lib libcmt.lib kernel32.lib user32.lib wsock32.lib advapi32.lib mpr.lib winspool.lib netapi32.lib psapi.lib gdi32.lib shell32.lib comdlg32.lib ole32.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\cad_Li\PPU\LogParams\x64\Debug\LogParams.pdb" /SUBSYSTEM:WINDOWS /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\cad_Li\PPU\LogParams\x64\Debug\LogParams.lib" /MACHINE:X64 /DLL x64\Debug\main.obj
+         x64\Debug\Values.obj
+            Bibliothek "E:\cad_Li\PPU\LogParams\x64\Debug\LogParams.lib" und Objekt "E:\cad_Li\PPU\LogParams\x64\Debug\LogParams.exp" werden erstellt.
+         Code wird generiert.
+         Codegenerierung ist abgeschlossen.
+         LogParams.vcxproj -> E:\cad_Li\PPU\LogParams\x64\Debug\LogParams.dll
+     1>Die Erstellung des Projekts "E:\cad_Li\PPU\LogParams\LogParams\LogParams.vcxproj" ist abgeschlossen, Build Ziel(e).
+
+Build erfolgreich.
+
+Verstrichene Zeit 00:00:02.10

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<CAEXFile FileName="PPU.aml" SchemaVersion="2.15">
+
+  <InstanceHierarchy Name="PPU">
+    <InternalElement Name="Kran">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>-100.179000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>-492.950000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>805.050000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>0.000000</Value>
+        </Attribute>
+      </Attribute>
+      <ExternalInterface Name="COLLADAInterface_Kran">
+        <Attribute AttributeDataType="xs:anyURI" Name="refRUI">
+          <Value>Kran.dae</Value>
+        </Attribute>
+      </ExternalInterface>
+    </InternalElement>
+    <InternalElement Name="Sortierstrecke">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>-72.831000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>473.930000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>801.900000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>0.000000</Value>
+        </Attribute>
+      </Attribute>
+      <ExternalInterface Name="COLLADAInterface_Sortierstrecke">
+        <Attribute AttributeDataType="xs:anyURI" Name="refRUI">
+          <Value>Sortierstrecke.dae</Value>
+        </Attribute>
+      </ExternalInterface>
+    </InternalElement>
+    <InternalElement Name="Stapel">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>1400.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>90.000000</Value>
+        </Attribute>
+      </Attribute>
+      <ExternalInterface Name="COLLADAInterface_Stapel">
+        <Attribute AttributeDataType="xs:anyURI" Name="refRUI">
+          <Value>Stapel.dae</Value>
+        </Attribute>
+      </ExternalInterface>
+    </InternalElement>
+    <InternalElement Name="Stempel">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>-700.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>700.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>0.000000</Value>
+        </Attribute>
+      </Attribute>
+      <ExternalInterface Name="COLLADAInterface_Stempel">
+        <Attribute AttributeDataType="xs:anyURI" Name="refRUI">
+          <Value>Stempel.dae</Value>
+        </Attribute>
+      </ExternalInterface>
+    </InternalElement>
+    <InternalElement Name="Montageplatte">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>0.000000</Value>
+        </Attribute>
+      </Attribute>
+      <ExternalInterface Name="COLLADAInterface_Montageplatte">
+        <Attribute AttributeDataType="xs:anyURI" Name="refRUI">
+          <Value>Montageplatte.dae</Value>
+        </Attribute>
+      </ExternalInterface>
+    </InternalElement>
+  </InstanceHierarchy>
+
+</CAEXFile>

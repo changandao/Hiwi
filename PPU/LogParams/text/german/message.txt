@@ -1,0 +1,21 @@
+﻿ SelectPrompt
+test
+
+
+NameInputPrompt
+Bitte geben Sie einen Parameternamen ein:
+
+
+ValueInputPromt
+Bitte Wert für string eingeben
+
+
+SnameInputPromt
+Bitte Namen für Fläche eingeben:
+
+Variablenausgabe
+%d
+
+NameModel
+%ws
+

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile FileName="PPU_Collada.aml" SchemaVersion="2.15">
+	<InstanceHierarchy Name="PPU">
+		<InternalElement Name="Kran">
+			<Attribute AttributeDataType="" Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>-10.1790</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>-492.950</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>805.050</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="COLLADAInterface_Kran">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>Kran.dea</Value>
+				</Attribute>
+			</ExternalInterface>
+		</InternalElement>
+		<InternalElement Name="Montageplatte">
+			<Attribute AttributeDataType="" Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="COLLADAInterface_Montageplatte">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>Montageplatte.dae</Value>
+				</Attribute>
+			</ExternalInterface>
+		</InternalElement>
+		<InternalElement Name="Sortierstrecke">
+			<Attribute AttributeDataType="" Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>-72.831</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>473.930</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>801.900</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="COLLADAInterface_Sortierstrecke">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>Sortierstrecke.dae</Value>
+				</Attribute>
+			</ExternalInterface>
+		</InternalElement>
+		<InternalElement Name="Stapel">
+			<Attribute AttributeDataType="" Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>1400</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="COLLADAInterface_Stapel">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>Stapel.dae</Value>
+				</Attribute>
+			</ExternalInterface>
+		</InternalElement>
+		<InternalElement Name="Stempel">
+			<Attribute AttributeDataType="" Name="Frame">
+				<Attribute Name="x" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="y" AttributeDataType="xs:double">
+					<Value>-700.00</Value>
+				</Attribute>
+				<Attribute Name="z" AttributeDataType="xs:double">
+					<Value>700.00</Value>
+				</Attribute>
+				<Attribute Name="rx" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="ry" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+				<Attribute Name="rz" AttributeDataType="xs:double">
+					<Value>0</Value>
+				</Attribute>
+			</Attribute>
+			<ExternalInterface Name="COLLADAInterface_Stempel">
+				<Attribute Name="refURI" AttributeDataType="xs:anyURI">
+					<Value>Stempel.dae</Value>
+				</Attribute>
+			</ExternalInterface>
+		</InternalElement>
+	</InstanceHierarchy>
+</CAEXFile>

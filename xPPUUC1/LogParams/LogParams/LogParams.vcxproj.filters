@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien\Import">
+      <UniqueIdentifier>{9d7151bf-92c2-482e-88b4-64da976772ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\Export">
+      <UniqueIdentifier>{c25b5e7b-88da-411c-afc1-02a5c74bba82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Import">
+      <UniqueIdentifier>{13b62e8d-40fd-4e83-a85d-13ecd4f96326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Quelldateien\Export">
+      <UniqueIdentifier>{41a2ea38-a8b3-425a-a4ef-3ad19dfbe654}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Values.cpp">
+      <Filter>Quelldateien\Export</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include=".h">
+      <Filter>Headerdateien\Import</Filter>
+    </ClInclude>
+    <ClInclude Include="Values.h">
+      <Filter>Headerdateien\Export</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<CAEXFile FileName="xPPUUC1_1.aml" SchemaVersion="2.15">
+
+  <InstanceHierarchy Name="xPPU">
+    <InternalElement Name="Kran">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>-180.050000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>41.179000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>-263.602000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>180.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>0.000000</Value>
+        </Attribute>
+      </Attribute>
+    </InternalElement>
+    <InternalElement Name="Montageplatte">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>0.000000</Value>
+        </Attribute>
+      </Attribute>
+    </InternalElement>
+    <InternalElement Name="OptischerSensor">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>-286.454000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>31.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>-403.360000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>90.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>0.000000</Value>
+        </Attribute>
+      </Attribute>
+    </InternalElement>
+    <InternalElement Name="Werkstückrückgabe">
+      <Attribute Name="Frame">
+        <Attribute AttributeDataType="xs:double" Name="x">
+          <Value>-286.454000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="y">
+          <Value>104.500000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="z">
+          <Value>-263.602000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rx">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="ry">
+          <Value>0.000000</Value>
+        </Attribute>
+        <Attribute AttributeDataType="xs:double" Name="rz">
+          <Value>0.000000</Value>
+        </Attribute>
+      </Attribute>
+    </InternalElement>
+  </InstanceHierarchy>
+
+</CAEXFile>

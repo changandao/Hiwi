@@ -1,0 +1,2 @@
+ERROR - C:\Program Files\PTC\Creo 3.0\M110\Common Files\text\config.pro, linenum 5 :  Keyword 'ALLOW_SAVE_FAILED_MODELS' is not valid.
+gdi32_comm_shutdown wait for polling thread timed out.

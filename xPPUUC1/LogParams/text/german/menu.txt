@@ -1,0 +1,21 @@
+﻿import1
+Import Parameter
+
+import2
+Importiert die Parameter aus dem Integrity Modeler
+
+import3
+Hilfe
+
+
+
+
+
+export1
+Export Parameter
+
+export2
+Exportiert die Parameter in eine XML Datei
+
+export3
+Hilfe

@@ -1,0 +1,324 @@
+﻿!trail file version No. 1800
+!Creo  TM  3.0  (c) 2018 by PTC Inc.  All Rights Reserved.
+!Exit Logger data:
+!	Process ID: 1784
+!	Application: Creo_Parametric
+!	Start date&time: 2018/03/09  10:54:38
+!	language: german
+!	machine type: x86e_win64
+!	datecode: M100
+!	Server: NONE
+!	Workspace: NONE
+!	traceback file: E:\cad_Li\PPU\LogParams\bin\traceback.log
+!end Exit Logger data.
+< 0 1.218370 1773 0 0 1028 1920 0 0 1080 13
+!mem_use INCREASE Blocks 651011, AppSize 62320747, SysSize 73823032
+< 0 0.992000 1648 0 0 837 1920 0 0 1080 13
+< 0 0.992000 1483 0 0 837 1920 0 0 1080 13
+!%CIWillkommen bei PTC Creo Parametric 3.0.
+< 0 0.988444 1483 0 0 834 1920 0 0 1080 13
+~ Close `SA_BROWSER_WELCOME_SCREEN` `SA_BROWSER_WELCOME_SCREEN`
+~ Command `ProCmdOpenLastSession` 
+~ Activate `pse_last_used_sess_dlg` `psh_open`
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\usecase.asm.13
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\montageplatte.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\montageplatte.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_asm.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_asm_3_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_drehtisch_asm_2_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tisch_asm_10_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischplatte_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischplatte_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_1_5_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_1_5_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_2_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_2_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_3_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_3_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_4_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_4_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_5_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischfuss_5_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tisch_verbindung_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tisch_verbindung_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischplatte_oben_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tischplatte_oben_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_tisch_asm_10_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_motor_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_unten_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_unten_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_hinten_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_hinten_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_seite_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_seite_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_oben_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_oben_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_grundplatte_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_zahnrad_gross_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_zahnrad_gross_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_riemen_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_riemen_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_zahnrad_klein_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_zahnrad_klein_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_verbindung_1_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_verbindung_1_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_verbindung_2_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_verbindung_2_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_antrieb_asm_1_1.asm.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_motor_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_2_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_1_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_1_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_2_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_2_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_3_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_3_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_4_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_4_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_5_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_5_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_6_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_6_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_2_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_1_asm_2_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_2_2.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_2_2.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_3_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_3_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_4_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_4_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_5_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_5_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_6_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_6_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\mikroschalter_1_asm_2_1.asm.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_drehtisch_asm_2_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_asm_10_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_2_3_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_2_3_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_3_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_3_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_4_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_4_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_6_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_6_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_5_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_5_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_zylinder_asm_10_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_asm_6_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_1_3_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_1_3_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_2_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_2_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_3_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_3_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_4_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_4_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_5_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_5_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_arm_asm_6_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_ventil_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_1_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_1_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_2_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_2_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_3_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_3_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_6_3_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_6_3_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_ventil_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuumgreifer_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_4_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_4_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_5_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_5_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuumgreifer_asm_1_1.asm.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_vakuum_asm_1_1.asm.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_asm_3_1.asm.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\kran_asm.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_asm.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_asm_2_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_ablage_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_ablage_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_basis_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_basis_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_sensor_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_sensor_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_werkstueck__1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_werkstueck__1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_asm_2_1.asm.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\werkstueckausgabe_asm.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_asm.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_asm_1_1.asm.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_halteplatte_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_halteplatte_1_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_2_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_2_1.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_schraubeplatte_2.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_schraubeplatte_2.prt.1
+!09-Mar-18 10:54:45  Start E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_schraube_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_schraube_1_1.prt.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_asm_1_1.asm.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\optischesensor_asm.asm.1
+!09-Mar-18 10:54:45  End   E:\cad_Li\xPPUUC1\CAD_BA\Kran_KS\usecase.asm.13
+!Command ProCmdModelOpenExe was pushed from the software.
+< 0 0.982519 1483 0 0 829 1920 0 0 1080 13
+!mem_use INCREASE Blocks 849342, AppSize 152090999, SysSize 172457640
+~ Timer `UI Desktop` `UI Desktop` `EmbedBrowserTimer`
+~ Activate `main_dlg_cur` `page_Tools_control_btn` 1
+~ Command `ProCmdUtilAux` 
+~ Select `aux_apps` `AppList` 1 `Integrity Modeler`
+~ Activate `aux_apps` `StartBtn`
+!Application (Integrity Modeler): running DLL-mode user_initialize
+!Application (Integrity Modeler): returned from DLL-mode user_initialize; status is 0
+!Application (Integrity Modeler): started via UI.
+!	exec path: E:\cad_Li\Riedel\LogParams\x64\Debug\LogParams.dll
+!	type: synchronous Pro/TOOLKIT DLL
+!%CIAnwendung 'Integrity Modeler' erfolgreich gestartet.
+~ Select `aux_apps` `AppList` 1 `Integrity Modeler`
+~ Activate `aux_apps` `AppList` 1 `Integrity Modeler`
+~ Activate `aux_apps` `InfoBtn`
+~ Select `texttool` `MenuBar` 1 `EditMenu`
+~ Select `texttool` `MenuBar` 1 `ViewMenu`
+~ Select `texttool` `MenuBar` 1 `EditMenu`
+~ Close `texttool` `MenuBar`
+~ Activate `texttool` `EditModeCB` 1
+@ txttool_char_size 7 12
+~ Move `texttool` `texttool` 2 3.529194 4.437442
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 327680 `Nach-Rechts-Taste`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 393216 `Nach-Oben-Taste`
+~ Key `texttool` `textPH.TextArea` 262144 `Nach-Links-Taste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 5767288 `X`
+~ Key `texttool` `textPH.TextArea` 0 ``
+~ Key `texttool` `textPH.TextArea` 5242960 `P`
+~ Key `texttool` `textPH.TextArea` 5242960 `P`
+~ Key `texttool` `textPH.TextArea` 5570645 `U`
+~ Key `texttool` `textPH.TextArea` 458752 `Nach-Unten-Taste`
+~ Key `texttool` `textPH.TextArea` 262144 `Nach-Links-Taste`
+~ Key `texttool` `textPH.TextArea` 262144 `Nach-Links-Taste`
+~ Key `texttool` `textPH.TextArea` 262144 `Nach-Links-Taste`
+~ Key `texttool` `textPH.TextArea` 262144 `Nach-Links-Taste`
+~ Key `texttool` `textPH.TextArea` 262144 `Nach-Links-Taste`
+~ Key `texttool` `textPH.TextArea` 0 ``
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 4391011 `C`
+~ Key `texttool` `textPH.TextArea` 524296 `Rücktaste`
+~ Key `texttool` `textPH.TextArea` 5767288 `X`
+~ Key `texttool` `textPH.TextArea` 0 ``
+~ Key `texttool` `textPH.TextArea` 5242960 `P`
+~ Key `texttool` `textPH.TextArea` 5242960 `P`
+~ Key `texttool` `textPH.TextArea` 5570645 `U`
+~ Key `texttool` `textPH.TextArea` 0 ``
+~ Wheel `texttool` `textPH.TextArea` 3 120 85 393216
+~ LButtonArm `texttool` `textPH.TextArea` 3 339 188 0
+~ Move `texttool` `textPH.TextArea` 3 340 188 0
+~ Move `texttool` `textPH.TextArea` 3 341 188 0
+~ Move `texttool` `textPH.TextArea` 3 342 188 0
+~ LButtonDisarm `texttool` `textPH.TextArea` 3 342 188 0
+~ LButtonActivate `texttool` `textPH.TextArea` 3 342 188 0
+~ Activate `texttool` `CloseButton`
+~ Activate `aux_apps` `StopBtn`
+!Application (Integrity Modeler): running DLL-mode user_terminate
+!Application (Integrity Modeler): returned from DLL-mode user_terminate
+!Application (Integrity Modeler): stopped.
+!%CIAnwendung 'Integrity Modeler' wurde erfolgreich beendet.
+~ Select `aux_apps` `AppList` 1 `Integrity Modeler`
+~ Activate `aux_apps` `StartBtn`
+!Application (Integrity Modeler): running DLL-mode user_initialize
+!Application (Integrity Modeler): returned from DLL-mode user_initialize; status is 0
+!Application (Integrity Modeler): started via UI.
+!	exec path: E:\cad_Li\Riedel\LogParams\x64\Debug\LogParams.dll
+!	type: synchronous Pro/TOOLKIT DLL
+!%CIAnwendung 'Integrity Modeler' erfolgreich gestartet.
+~ Select `aux_apps` `AppList` 1 `Integrity Modeler`
+~ Activate `aux_apps` `InfoBtn`
+~ Move `texttool` `texttool` 2 3.321594 4.748842
+~ Select `texttool` `MenuBar` 1 `FileMenu`
+~ Select `texttool` `MenuBar` 1 `EditMenu`
+~ Select `texttool` `MenuBar` 1 `FileMenu`
+~ Select `texttool` `MenuBar` 1 `EditMenu`
+~ Close `texttool` `MenuBar`
+~ Close `texttool` `texttool`
+~ Close `aux_apps` `aux_apps`
+~ Command `ProCmdUtilAux` 
+~ Select `aux_apps` `AppList` 0
+~ Select `aux_apps` `AppList` 1 `Integrity Modeler`
+~ Close `aux_apps` `aux_apps`
+~ Activate `main_dlg_cur` `main_dlg_cur`
+~ Command `ProCmdUtilAux` 
+~ Activate `aux_apps` `InfoBtn`
+~ Move `texttool` `texttool` 2 0.648749 4.385542
+~ Activate `texttool` `CloseButton`
+~ Select `aux_apps` `AppList` 1 `Integrity Modeler`
+~ Move `aux_apps` `aux_apps` 2 2.750695 4.670992
+~ Activate `aux_apps` `aux_apps`
+~ Select `aux_apps` `AppList` 0
+~ Close `aux_apps` `aux_apps`
+~ Close `main_dlg_cur` `main_dlg_cur`
+!Command ProCmdOSExit was pushed from the software.
+! Message Dialog: Warning
+!               : PTC Creo Parametric wird beendet und alle ungespeicherten Arbeiten gehen verloren.
+!               : Möchten Sie das Programm wirklich beenden?
+~ FocusIn `UI Message Dialog` `yes`
+~ Activate `UI Message Dialog` `yes`
+!Application (Integrity Modeler): running DLL-mode user_terminate
+!Application (Integrity Modeler): returned from DLL-mode user_terminate
+!End of Trail File

@@ -1,0 +1,8 @@
+
+NAME        Integrity Modeler
+EXEC_PATH   E:\cad_Li\xPPUUC1\LogParams\x64\Debug\LogParams.dll
+TEXT_PATH   E:\cad_Li\xPPUUC1\LogParams
+DELAY_START TRUE
+ALLOW_STOP  TRUE
+STARTUP     DLL
+END

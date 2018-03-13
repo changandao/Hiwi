@@ -1,0 +1,8 @@
+Root Name: CAEXFile
+InstanceName isxPPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:OptischerSensor
+we WANG TO KNOW IF IT what is v name:Werkstückrückgabe
+we WANG TO KNOW IF IT what is v name:xPPU_UseCase1

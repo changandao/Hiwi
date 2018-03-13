@@ -1,0 +1,149 @@
+Root Name: CAEXFile
+InstanceName isPPU
+what is this?: values? -100.179
+what is this?: values? -492.95
+what is this?: values? 805.05
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 1400
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? -700
+what is this?: values? 700
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? -72.831
+what is this?: values? 473.93
+what is this?: values? 801.9
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+what is this?: values? -100.179
+what is this?: values? -492.95
+what is this?: values? 805.05
+what is this?: values? 0
+what had happend ? 0
+what is this?: values? 0
+what had happendwfwf ? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 1400
+what is this?: values? 0
+what had happend ? 0
+what is this?: values? 0
+what had happendwfwf ? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? -700
+what is this?: values? 700
+what is this?: values? 0
+what had happend ? 0
+what is this?: values? 0
+what had happendwfwf ? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what is this?: values? 0
+what had happend ? 0
+what is this?: values? 0
+what had happendwfwf ? 0
+what is this?: values? 0
+what is this?: values? -72.831
+what is this?: values? 473.93
+what is this?: values? 801.9
+what is this?: values? 0
+what had happend ? 0
+what is this?: values? 0
+what had happendwfwf ? 0
+what is this?: values? 0
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+InstanceName is: PPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+InstanceName is: PPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+InstanceName is: PPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+InstanceName is: PPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+InstanceName is: PPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+InstanceName is: PPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+InstanceName is: PPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
+Root Name: CAEXFile
+InstanceName is: PPU
+we WANG TO KNOW IF IT what is v name:Kran
+we WANG TO KNOW IF IT ENTERS:
+we WANG TO KNOW IF IT what is v name:Stapel
+we WANG TO KNOW IF IT what is v name:Stempel
+we WANG TO KNOW IF IT what is v name:Montageplatte
+we WANG TO KNOW IF IT what is v name:Sortierstrecke
