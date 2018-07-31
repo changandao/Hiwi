@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <CAEXFile FileName="xPPUUC1_1.aml" SchemaVersion="2.15">
 
-  <InstanceHierarchy Name="xPPU">
-    <InternalElement Name="Kran">
+  <InstanceHierarchy Name="TEST">
+    <InternalElement Name="KRAN">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>-180.050000</Value>
@@ -24,7 +24,7 @@
         </Attribute>
       </Attribute>
     </InternalElement>
-    <InternalElement Name="Montageplatte">
+    <InternalElement Name="MONTAGEPLATTE">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>0.000000</Value>
@@ -46,7 +46,7 @@
         </Attribute>
       </Attribute>
     </InternalElement>
-    <InternalElement Name="OptischerSensor">
+    <InternalElement Name="TEST">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>-286.454000</Value>
@@ -68,7 +68,7 @@
         </Attribute>
       </Attribute>
     </InternalElement>
-    <InternalElement Name="Werkstückrückgabe">
+    <InternalElement Name="WERKSTUECKAUSGABE">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>-286.454000</Value>

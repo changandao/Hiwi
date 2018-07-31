@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<CAEXFile FileName="xPPUUC1_1.aml" SchemaVersion="2.15">
+
+  <InstanceHierarchy Name="TEST">
+    <InternalElement Name="MONTAGEPLATTE" Type="PRT"/>
+    <InternalElement Name="KRAN_ASM" Type="ASM">
+      <InternalElement Name="KRAN_ASM_3_1" Type="ASM">
+        <InternalElement Name="KRAN_DREHTISCH_ASM_2_1" Type="ASM">
+          <InternalElement Name="KRAN_TISCH_ASM_10_1" Type="ASM">
+            <InternalElement Name="KRAN_TISCHPLATTE_2_1" Type="PRT"/>
+            <InternalElement Name="KRAN_TISCHFUSS_1_5_1" Type="PRT"/>
+            <InternalElement Name="KRAN_TISCHFUSS_2_2_1" Type="PRT"/>
+            <InternalElement Name="KRAN_TISCHFUSS_3_2_1" Type="PRT"/>
+            <InternalElement Name="KRAN_TISCHFUSS_4_2_1" Type="PRT"/>
+            <InternalElement Name="KRAN_TISCHFUSS_5_2_1" Type="PRT"/>
+            <InternalElement Name="KRAN_TISCH_VERBINDUNG_2_1" Type="PRT"/>
+            <InternalElement Name="KRAN_TISCHPLATTE_OBEN_1_1" Type="PRT"/>
+          </InternalElement>
+          <InternalElement Name="KRAN_MOTOR_ASM_1_1" Type="ASM">
+            <InternalElement Name="KRAN_GRUNDPLATTE_ASM_1_1" Type="ASM">
+              <InternalElement Name="KRAN_GRUNDPLATTE_UNTEN_1_1" Type="PRT"/>
+              <InternalElement Name="KRAN_GRUNDPLATTE_HINTEN_1_1" Type="PRT"/>
+              <InternalElement Name="KRAN_GRUNDPLATTE_SEITE_1_1" Type="PRT"/>
+              <InternalElement Name="KRAN_GRUNDPLATTE_OBEN_2_1" Type="PRT"/>
+            </InternalElement>
+            <InternalElement Name="KRAN_ANTRIEB_ASM_1_1" Type="ASM">
+              <InternalElement Name="KRAN_ANTRIEB_ZAHNRAD_GROSS_1_1" Type="PRT"/>
+              <InternalElement Name="KRAN_ANTRIEB_RIEMEN_1_1" Type="PRT"/>
+              <InternalElement Name="KRAN_ANTRIEB_ZAHNRAD_KLEIN_1_1" Type="PRT"/>
+              <InternalElement Name="KRAN_ANTRIEB_VERBINDUNG_1_1_1" Type="PRT"/>
+              <InternalElement Name="KRAN_ANTRIEB_VERBINDUNG_2_1_1" Type="PRT"/>
+            </InternalElement>
+          </InternalElement>
+          <InternalElement Name="MIKROSCHALTER_2_ASM_1_1" Type="ASM">
+            <InternalElement Name="MIKROSCHALTER_1_1_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_2_2_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_3_1_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_4_1_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_5_1_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_6_1_1" Type="PRT"/>
+          </InternalElement>
+          <InternalElement Name="MIKROSCHALTER_1_ASM_2_1" Type="ASM">
+            <InternalElement Name="MIKROSCHALTER_1_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_2_2" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_3_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_4_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_5_1" Type="PRT"/>
+            <InternalElement Name="MIKROSCHALTER_6_1" Type="PRT"/>
+          </InternalElement>
+        </InternalElement>
+        <InternalElement Name="KRAN_ZYLINDER_ASM_10_1" Type="ASM">
+          <InternalElement Name="KRAN_ZYLINDER_2_3_1" Type="PRT"/>
+          <InternalElement Name="KRAN_ZYLINDER_3_2_1" Type="PRT"/>
+          <InternalElement Name="KRAN_ZYLINDER_4_2_1" Type="PRT"/>
+          <InternalElement Name="KRAN_ZYLINDER_6_2_1" Type="PRT"/>
+          <InternalElement Name="KRAN_ZYLINDER_5_2_1" Type="PRT"/>
+        </InternalElement>
+        <InternalElement Name="KRAN_ARM_ASM_6_1" Type="ASM">
+          <InternalElement Name="KRAN_ARM_1_3_1" Type="PRT"/>
+          <InternalElement Name="KRAN_ARM_2_2_1" Type="PRT"/>
+          <InternalElement Name="KRAN_ARM_3_2_1" Type="PRT"/>
+          <InternalElement Name="KRAN_ARM_4_2_1" Type="PRT"/>
+          <InternalElement Name="KRAN_ARM_5_1_1" Type="PRT"/>
+        </InternalElement>
+        <InternalElement Name="KRAN_VAKUUM_ASM_1_1" Type="ASM">
+          <InternalElement Name="KRAN_VAKUUM_VENTIL_ASM_1_1" Type="ASM">
+            <InternalElement Name="KRAN_VAKUUM_1_2_1" Type="PRT"/>
+            <InternalElement Name="KRAN_VAKUUM_2_2_1" Type="PRT"/>
+            <InternalElement Name="KRAN_VAKUUM_3_1_1" Type="PRT"/>
+            <InternalElement Name="KRAN_VAKUUM_6_3_1" Type="PRT"/>
+          </InternalElement>
+          <InternalElement Name="KRAN_VAKUUMGREIFER_ASM_1_1" Type="ASM">
+            <InternalElement Name="KRAN_VAKUUM_4_1_1" Type="PRT"/>
+            <InternalElement Name="KRAN_VAKUUM_5_1_1" Type="PRT"/>
+          </InternalElement>
+        </InternalElement>
+      </InternalElement>
+    </InternalElement>
+    <InternalElement Name="WERKSTUECKAUSGABE_ASM" Type="ASM">
+      <InternalElement Name="WERKSTUECKAUSGABE_ASM_2_1" Type="ASM">
+        <InternalElement Name="WERKSTUECKAUSGABE_ABLAGE_1_1" Type="PRT"/>
+        <InternalElement Name="WERKSTUECKAUSGABE_BASIS_1_1" Type="PRT"/>
+        <InternalElement Name="WERKSTUECKAUSGABE_SENSOR_1_1" Type="PRT"/>
+        <InternalElement Name="WERKSTUECKAUSGABE_WERKSTUECK__1" Type="PRT"/>
+      </InternalElement>
+    </InternalElement>
+    <InternalElement Name="TEST_MOTAGE11_USER" Type="ASM">
+      <InternalElement Name="OPTISCHESENSOR_ASM_1_1" Type="ASM">
+        <InternalElement Name="OPTISCHESENSOR_HALTEPLATTE_1_1" Type="PRT"/>
+        <InternalElement Name="OPTISCHESENSOR_2_1" Type="PRT"/>
+        <InternalElement Name="OPTISCHESENSOR_SCHRAUBEPLATTE_2" Type="PRT"/>
+        <InternalElement Name="OPTISCHESENSOR_SCHRAUBE_1_1" Type="PRT"/>
+      </InternalElement>
+    </InternalElement>
+  </InstanceHierarchy>
+
+</CAEXFile>
