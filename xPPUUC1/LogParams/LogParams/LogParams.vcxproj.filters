@@ -33,6 +33,9 @@
     <ClCompile Include="Values.cpp">
       <Filter>Quelldateien\Export</Filter>
     </ClCompile>
+    <ClCompile Include="TreeNode.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include=".h">
@@ -40,6 +43,9 @@
     </ClInclude>
     <ClInclude Include="Values.h">
       <Filter>Headerdateien\Export</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeNode.h">
+      <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
