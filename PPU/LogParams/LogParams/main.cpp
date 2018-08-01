@@ -1,72 +1,4 @@
-﻿/// C++ Bibliotheken
-#include <stdlib.h>
-#include <fstream>
-#include <vector>
-#include <iostream>
-#include <string>
-#include <sstream>
-
-
-///Header für Toolkit
-#include <ProToolkit.h>
-#include <ProCore.h>
-#include <ProSolid.h>
-#include <ProFeature.h>
-#include <ProMenu.h>
-#include <ProEdge.h>
-#include <ProToolkitDll.h>
-#include <ProMdl.h>
-#include <ProMessage.h>
-#include <ProModelitem.h>
-#include <ProUtil.h>
-#include <ProMenuBar.h>
-#include <ProUICmd.h>
-#include <ProGeomitemdata.h>
-#include <ProObjects.h>
-#include <ProCurvedata.h>
-#include <ProSurfacedata.h>
-#include <ProCsysdata.h>
-#include <ProParameter.h>
-#include <fstream>
-#include <ProSelection.h>
-#include <ProMdl.h>
-
-
-/// Header für DOM (Xerces) 
-#include <PlatformUtils.hpp>
-#include <AbstractDOMParser.hpp>
-#include <DOMImplementation.hpp>
-#include <DOMImplementationLS.hpp>
-#include <DOMImplementationRegistry.hpp>
-#include <DOMLSParser.hpp>
-#include <DOMException.hpp>
-#include <DOMDocument.hpp>
-#include <DOMElement.hpp>
-#include <DOMCount.hpp>
-#include <DOMNodeList.hpp>
-#include <DOMError.hpp>
-#include <DOMLocator.hpp>
-#include <DOMNamedNodeMap.hpp>
-#include <DOMAttr.hpp>
-#include <DOMErrorHandler.hpp>
-#include <XMLString.hpp>
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/framework/StdOutFormatTarget.hpp>
-#include <xercesc/framework/LocalFileFormatTarget.hpp>
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/util/XMLString.hpp>
-#include <xercesc/util/PlatformUtils.hpp>
-
-
-//Funktionsprototypen
-static uiCmdAccessState TestAccessDefault(uiCmdAccessMode access_mode);
-uiCmdCmdActFn Parameter_import(uiCmdCmdId  command, uiCmdValue *p_value, void *p_push_command_data);
-uiCmdCmdActFn Parameter_export(uiCmdCmdId  command, uiCmdValue *p_value, void *p_push_command_data);
-
-
-	
-using namespace std;	
-
+﻿#include "main.h"
 
 static uiCmdAccessState TestAccessDefault(uiCmdAccessMode access_mode)
 {
@@ -74,7 +6,7 @@ static uiCmdAccessState TestAccessDefault(uiCmdAccessMode access_mode)
 }
 
 
- extern "C" int user_initialize( int argc, char *argv[], char *proe_vsn, char *build, wchar_t err_buff[] )
+extern "C" int user_initialize( int argc, char *argv[], char *proe_vsn, char *build, wchar_t err_buff[] )
 {
 	std::ofstream log("logMain.log",std::ofstream::app);  //// Log-Datei zur Fehlersuche
 
@@ -82,33 +14,33 @@ static uiCmdAccessState TestAccessDefault(uiCmdAccessMode access_mode)
 
 	ProError error;
 
-	
+
 	////////////////////// Button für Import in Creo
 
-	
+
 	// Festlegen,welche Funktion durch den Button aufgerufen wird
-		error = ProCmdActionAdd(
-							"Parameter_import", 
-							(uiCmdCmdActFn) Parameter_import, 
-							uiProe2ndImmediate, 
-							TestAccessDefault,
-							PRO_B_TRUE, 
-							PRO_B_TRUE,
-							&cmd_id 
-							);
+	error = ProCmdActionAdd(
+		"Parameter_import", 
+		(uiCmdCmdActFn) Parameter_import, 
+		uiProe2ndImmediate, 
+		TestAccessDefault,
+		PRO_B_TRUE, 
+		PRO_B_TRUE,
+		&cmd_id 
+		);
 	if(error != 0)
 	{
 		log << "ProCmdActionAdd for Parameter returned " << error << std::endl;
 	}
-	
+
 	///// Beschriftung des Buttons
 	error = ProCmdDesignate	(
-							cmd_id,	
-							"import1",
-							"import2",	
-							"import3",
-							L"menu.txt"	
-							);
+		cmd_id,	
+		"import1",
+		"import2",	
+		"import3",
+		L"menu.txt"	
+		);
 	if(error != 0)
 	{
 		log << "ProCmdDesignate for Parameter_import returned " << error << std::endl;
@@ -116,43 +48,72 @@ static uiCmdAccessState TestAccessDefault(uiCmdAccessMode access_mode)
 
 
 	//////////////////////// Button für Export aus Creo
-				error = ProCmdActionAdd(
-							"Parameter_export", 
-							(uiCmdCmdActFn) Parameter_export, 
-							uiProe2ndImmediate, 
-							TestAccessDefault,
-							PRO_B_TRUE, 
-							PRO_B_TRUE,
-							&cmd_id 
-							);
+	error = ProCmdActionAdd(
+		"Parameter_export", 
+		(uiCmdCmdActFn) Parameter_export, 
+		uiProe2ndImmediate, 
+		TestAccessDefault,
+		PRO_B_TRUE, 
+		PRO_B_TRUE,
+		&cmd_id 
+		);
 	if(error != 0)
 	{
 		log << "ProCmdActionAdd for Parameter returned " << error << std::endl;
 	}
 	error = ProCmdDesignate	(
-							cmd_id,	
-							"export1",
-							"export2",	
-							"export3",
-							L"menu.txt"	
-							);
+		cmd_id,	
+		"export1",
+		"export2",	
+		"export3",
+		L"menu.txt"	
+		);
 	if(error != 0)
 	{
 		log << "ProCmdDesignate for Parameter_export returned " << error << std::endl;
 	}
 
+	////////////////////// Button für Import in Creo
+
+
+	// Festlegen,welche Funktion durch den Button aufgerufen wird
+	error = ProCmdActionAdd(
+		"Model_import", 
+		(uiCmdCmdActFn) Model_import, 
+		uiProe2ndImmediate, 
+		TestAccessDefault,
+		PRO_B_TRUE, 
+		PRO_B_TRUE,
+		&cmd_id 
+		);
+	if(error != 0)
+	{
+		log << "ProCmdActionAdd for Parameter returned " << error << std::endl;
+	}
+
+	///// Beschriftung des Buttons
+	error = ProCmdDesignate	(
+		cmd_id,	
+		"Model_import1",
+		"Model_import2",	
+		"Model_import3",
+		L"menu.txt"	
+		);
+	if(error != 0)
+	{
+		log << "ProCmdDesignate for for_Model_import returned " << error << std::endl;
+	}
+
 
 	return 0;
-	
+
 }
 
-	  
-
-     extern "C" void user_terminate()
-  {
-     }
 
 
+extern "C" void user_terminate()
+{
+}
 
 /// Funtion zur Änderung der Parameter in Creo
 void import(ProName name, double value)
@@ -164,63 +125,54 @@ void import(ProName name, double value)
 	ProParameter param;
 	ProParamvalue provalue;
 
-	
+
 	///ProMdl bekommen 
 	error = ProMdlCurrentGet(&p_model);
 	if (error != 0)
 	{
-	log << "ProMdlCurrentGet returned" << error << std::endl;
+		log << "ProMdlCurrentGet returned" << error << std::endl;
 	}
-	
+
 	///ProMdl wird zu ProModelitem
 	error = ProMdlToModelitem(p_model,&p_model_item);
 	if (error != 0)
 	{
-	log << "ProMdlToModelitem returned" << error << std::endl;
+		log << "ProMdlToModelitem returned" << error << std::endl;
 	}
-	
+
 	/// ProParameter initiieren
 	error=	ProParameterInit(&p_model_item,name , &param);
 	if (error != 0)
 	{
-	log << "ProParameterInit returned" << error << std::endl;
+		log << "ProParameterInit returned" << error << std::endl;
 	}
 
 	/// ProParaneterValue bekommen
 	ProParameterValueGet	(&param, &provalue);
-		if (error != 0)
+	if (error != 0)
 	{
-	log << "ProParameterValueGet" << error << std::endl;
+		log << "ProParameterValueGet" << error << std::endl;
 	}
-	
-		
+
+
 	/// ProParamValue setzen
 	error = ProParamvalueSet	(&provalue,&value,PRO_PARAM_DOUBLE);
-		if (error != 0)
+	if (error != 0)
 	{
-	log << "ProParamValueSet" << error << std::endl;
-	
+		log << "ProParamValueSet" << error << std::endl;
+
 	}
 	/// Wert des Parameters in Creo ändern
 	error = ProParameterValueWithUnitsSet	(&param,&provalue,NULL);
 	if (error !=0)
 	{
-	log << "ProParameterValueWithUnitsSet" << error << std::endl;
+		log << "ProParameterValueWithUnitsSet" << error << std::endl;
 	}
 
 
 
 }
-	/// struct, in dem Name und Koordinatenwerte gespeichert werden
-	struct Values {   
-    XMLCh* Name;  
-	double x;
-	double y;
-	double z;
-	double rx;
-	double ry;
-	double rz;
-	};
+/// struct, in dem Name und Koordinatenwerte gespeichert werden
 
 /// Funktion zur Umwandlung von double zu wchar_t*
 const wchar_t* d2wc(double value){
@@ -233,7 +185,7 @@ const wchar_t* d2wc(double value){
 
 /// Funktion zur Umwandlung eines strings zu wchar_t*
 const wchar_t* s2wc(string s){
-	
+
 	const wchar_t* a = xercesc::XMLString::transcode(s.c_str());
 	return a;
 
@@ -246,13 +198,13 @@ uiCmdCmdActFn Parameter_import(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 
 	std::ofstream log("logMain.txt",std::ofstream::app);
 	ProName proname;
-	
+
 	/////////////////////////////////////////////////	xml auslesen
 	xercesc::XMLPlatformUtils::Initialize();
 	const char* xmlFile = "..\\..\\files\\IM.aml" ;
 	XMLCh gLS[] = { chLatin_L, chLatin_S, chNull };
-    DOMImplementation* impl = DOMImplementationRegistry::getDOMImplementation(gLS);
-    DOMLSParser* parser = impl->createLSParser(DOMImplementationLS::MODE_SYNCHRONOUS, 0);
+	DOMImplementation* impl = DOMImplementationRegistry::getDOMImplementation(gLS);
+	DOMLSParser* parser = impl->createLSParser(DOMImplementationLS::MODE_SYNCHRONOUS, 0);
 	DOMDocument* doc = NULL;
 	doc = parser->parseURI(xmlFile);
 	DOMElement* root = doc->getDocumentElement();//rootElement
@@ -263,28 +215,19 @@ uiCmdCmdActFn Parameter_import(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 
 	/// struct für das Speichern der Werte aus der xml-Datei
 	struct FRAME {   
-    string Name; 
-    double x; 
-	double y; 
-	double z; 
-	double rx; 
-	double ry; 
-	double rz; 
+		string Name; 
+		double x; 
+		double y; 
+		double z; 
+		double rx; 
+		double ry; 
+		double rz; 
 	} frame;  
 	FRAME child_frame;
 
 	double value;
-	//{"Kran", "Montageplatte", "OptischerSensor", "Werkstückrückgabe"};
 
-//	double axisNumber[6][5];
-	//double x[5],y[5],z[5],rx[5],ry[5],rz[5];
 	DOMText* pTextNode = NULL;
-	/*DOMText* pTextNode1 = NULL;
-	DOMText* pTextNode2 = NULL;
-	DOMText* pTextNode3 = NULL;
-	DOMText* pTextNode4 = NULL;
-	DOMText* pTextNode5 = NULL;
-	DOMText* pTextNode6 = NULL;*/
 	DOMElement * pChild = NULL;	
 	DOMElement * pAttr1 = NULL;
 	DOMElement * pAttr2 = NULL;
@@ -292,39 +235,32 @@ uiCmdCmdActFn Parameter_import(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 	DOMDocument *pDOMDocument = NULL;
 	string axises[] = {"x","y","z","rz","ry","rz",}; 
 	string parts[] = {"PPU","Kran", "Sortierstrecke", "Stapel", "Stempel", "Montageplatte"};
-
+	int num_elem = 0;
 	/// Vektor vom Typ Frame in dem alle Werte gespeichert werden
-    std::vector<FRAME> v;
-	DOMElement * pInstanceElement = root->getFirstElementChild();
-	string instanceName = XMLString::transcode(pInstanceElement->getAttribute(L"Name"));
+	std::vector<FRAME> v;
+	DOMElement * pInstanceElement = root->getFirstElementChild(); 
+	string instanceName = XMLString::transcode(pInstanceElement->getAttribute(L"Name")); //InstanceHierarchy lesen
 	parts[0] = instanceName;
 	log<<"InstanceName is: "<< parts[0]<<endl;
 	for(DOMElement* pChild = pInstanceElement->getFirstElementChild(); pChild!=0; pChild = pChild->getNextElementSibling())
 	{
-		string attr_part = XMLString::transcode(pChild->getAttribute(L"Name"));
-		//frame.Name = attr_part;
+		string attr_part = XMLString::transcode(pChild->getAttribute(L"Name"));//InternalElement Name lesen
 		for(DOMElement* pChild_part = pChild->getFirstElementChild(); pChild_part!=0; pChild_part = pChild_part->getNextElementSibling())
 		{
 			string name_child_part = XMLString::transcode(pChild_part->getTagName());
-			//log << "Child of Part Name: " << name_child_part << endl;
-
-			/*if (name_child_part.compare("InternalElement")==0)
-			{
-				attr_part = XMLString::transcode(pChild->getAttribute(L"Name"));
-				child_frame.Name = attr_part;
-			}else*/ 
 			if(name_child_part.compare("Attribute")==0)
 			{
 				child_frame.Name = attr_part;
+				num_elem++;
+				parts[num_elem] = attr_part;
 				for(DOMElement * pAttr = pChild_part->getFirstElementChild(); pAttr!=0; pAttr=pAttr->getNextElementSibling())
 				{
-					//name = XMLString::transcode(pAttr->getNodeName());
 					attr_part = XMLString::transcode(pAttr->getAttribute(L"Name"));
 					DOMElement * pValue = pAttr->getFirstElementChild();
-					string text = XMLString::transcode(pValue->getTextContent());
+					string text = XMLString::transcode(pValue->getTextContent());// Value von der Axis lesen
 					const char * c = text.c_str();
 					value = atof(c);
-
+					// die Value in die struct store
 					if (attr_part.compare("x") == 0 )
 					{
 						child_frame.x = value;
@@ -362,106 +298,503 @@ uiCmdCmdActFn Parameter_import(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 		if (v[i].Name.compare(parts[1]) == 0)
 		{
 			log<<"we WANG TO KNOW IF IT ENTERS:"<< endl;
-			ProStringToWstring(proname,"kran_x");
+			ProStringToWstring(proname,"kran_frame_x");
 			import(proname, v[i].x);
-	
-			ProStringToWstring(proname,"kran_y");
+
+			ProStringToWstring(proname,"kran_frame_y");
 			import(proname, v[i].y);
 
-			ProStringToWstring(proname,"kran_z");
+			ProStringToWstring(proname,"kran_frame_z");
 			import(proname, v[i].z);
-			
-			ProStringToWstring(proname,"kran_rx");
+
+			ProStringToWstring(proname,"kran_frame_rx");
 			import(proname, v[i].rx);
 
-			ProStringToWstring(proname,"kran_ry");
+			ProStringToWstring(proname,"kran_frame_ry");
 			import(proname, v[i].ry);
 
-			ProStringToWstring(proname,"kran_rz");
+			ProStringToWstring(proname,"kran_frame_rz");
 			import(proname, v[i].rz);
 		}else if (v[i].Name.compare(parts[2]) == 0)
 		{
-			ProStringToWstring(proname,"Sortierstrecke_x");
+			ProStringToWstring(proname,"Sortierstrecke_frame_x");
 			import(proname, v[i].x);
-	
-			ProStringToWstring(proname,"Sortierstrecke_y");
+
+			ProStringToWstring(proname,"Sortierstrecke_frame_y");
 			import(proname, v[i].y);
 
-			ProStringToWstring(proname,"Sortierstrecke_z");
+			ProStringToWstring(proname,"Sortierstrecke_frame_z");
 			import(proname, v[i].z);
-			
-			ProStringToWstring(proname,"Sortierstrecke_rx");
+
+			ProStringToWstring(proname,"Sortierstrecke_frame_rx");
 			import(proname, v[i].rx);
 
-			ProStringToWstring(proname,"Sortierstrecke_ry");
+			ProStringToWstring(proname,"Sortierstrecke_frame_ry");
 			import(proname, v[i].ry);
 
-			ProStringToWstring(proname,"Sortierstrecke_rz");
+			ProStringToWstring(proname,"Sortierstrecke_frame_rz");
 			import(proname, v[i].rz);
 		}else if (v[i].Name.compare(parts[3]) == 0)
 		{
-			ProStringToWstring(proname,"Stapel_x");
+			ProStringToWstring(proname,"Stapel_frame_x");
 			import(proname, v[i].x);
-	
-			ProStringToWstring(proname,"Stapel_y");
+
+			ProStringToWstring(proname,"Stapel_frame_y");
 			import(proname, v[i].y);
 
-			ProStringToWstring(proname,"Stapel_z");
+			ProStringToWstring(proname,"Stapel_frame_z");
 			import(proname, v[i].z);
-			
-			ProStringToWstring(proname,"Stapel_rx");
+
+			ProStringToWstring(proname,"Stapel_frame_rx");
 			import(proname, v[i].rx);
 
-			ProStringToWstring(proname,"Stapel_ry");
+			ProStringToWstring(proname,"Stapel_frame_ry");
 			import(proname, v[i].ry);
 
-			ProStringToWstring(proname,"Stapel_rz");
+			ProStringToWstring(proname,"Stapel_frame_rz");
 			import(proname, v[i].rz);
 		}else if (v[i].Name.compare(parts[4]) == 0)
 		{
-			ProStringToWstring(proname,"Stempel_x");
+			ProStringToWstring(proname,"Stempel_frame_x");
 			import(proname, v[i].x);
-	
-			ProStringToWstring(proname,"Stempel_y");
+
+			ProStringToWstring(proname,"Stempel_frame_y");
 			import(proname, v[i].y);
 
-			ProStringToWstring(proname,"Stempel_z");
+			ProStringToWstring(proname,"Stempel_frame_z");
 			import(proname, v[i].z);
-			
-			ProStringToWstring(proname,"Stempel_rx");
+
+			ProStringToWstring(proname,"Stempel_frame_rx");
 			import(proname, v[i].rx);
 
-			ProStringToWstring(proname,"Stempel_ry");
+			ProStringToWstring(proname,"Stempel_frame_ry");
 			import(proname, v[i].ry);
 
-			ProStringToWstring(proname,"Stempel_rz");
+			ProStringToWstring(proname,"Stempel_frame_rz");
 			import(proname, v[i].rz);
 		}else if (v[i].Name.compare(parts[5]) == 0)
 		{
-			ProStringToWstring(proname,"Montageplatte_x");
+			ProStringToWstring(proname,"Montageplatte_frame_x");
 			import(proname, v[i].x);
-	
-			ProStringToWstring(proname,"Montageplatte_y");
+
+			ProStringToWstring(proname,"Montageplatte_frame_y");
 			import(proname, v[i].y);
 
-			ProStringToWstring(proname,"Montageplatte_z");
+			ProStringToWstring(proname,"Montageplatte_frame_z");
 			import(proname, v[i].z);
-			
-			ProStringToWstring(proname,"Montageplatte_rx");
+
+			ProStringToWstring(proname,"Montageplatte_frame_rx");
 			import(proname, v[i].rx);
 
-			ProStringToWstring(proname,"Montageplatte_ry");
+			ProStringToWstring(proname,"Montageplatte_frame_ry");
 			import(proname, v[i].ry);
 
-			ProStringToWstring(proname,"Montageplatte_rz");
+			ProStringToWstring(proname,"Montageplatte_frame_rz");
 			import(proname, v[i].rz);
 		}
 	}
-	
+
 	return 0;
 
 }
 
+uiCmdCmdActFn Model_import(uiCmdCmdId  command, uiCmdValue *p_value, void *p_push_command_data)
+{
+
+	std::ofstream log("logMain.txt",std::ofstream::app);
+	ProName proname;
+
+	/////////////////////////////////////////////////	xml auslesen
+	xercesc::XMLPlatformUtils::Initialize();
+	const char* xmlFile = "..\\..\\files\\IM.aml" ;
+	XMLCh gLS[] = { chLatin_L, chLatin_S, chNull };
+	DOMImplementation* impl = DOMImplementationRegistry::getDOMImplementation(gLS);
+	DOMLSParser* parser = impl->createLSParser(DOMImplementationLS::MODE_SYNCHRONOUS, 0);
+	DOMDocument* doc = NULL;
+	doc = parser->parseURI(xmlFile);
+	DOMElement* root = doc->getDocumentElement();//rootElement
+	//DOMElement* rootModel;
+	string name = XMLString::transcode(root->getNodeName());
+
+	log << "Root Name: " << name << endl;
+
+	/// struct für das Speichern der Werte aus der xml-Datei
+	struct FRAME {   
+		string Name; 
+		double x; 
+		double y; 
+		double z; 
+		double rx; 
+		double ry; 
+		double rz; 
+	} frame;  
+	FRAME child_frame;
+
+	double value;
+
+	DOMText* pTextNode = NULL;
+	DOMElement * pChild = NULL;	
+	DOMElement * pAttr1 = NULL;
+	DOMElement * pAttr2 = NULL;
+	DOMElement * pValue = NULL;
+	DOMDocument *pDOMDocument = NULL;
+	string axises[] = {"x","y","z","rz","ry","rz",}; 
+	string parts[] = {"PPU","Kran", "Sortierstrecke", "Stapel", "Stempel", "Montageplatte"};
+
+	/// Vektor vom Typ Frame in dem alle Werte gespeichert werden
+	std::vector<FRAME> v;
+	DOMElement * pInstanceElement = root->getFirstElementChild(); 
+	string instanceName = XMLString::transcode(pInstanceElement->getAttribute(L"Name")); //InstanceHierarchy lesen
+	parts[0] = instanceName;
+	log<<"InstanceName is: "<< parts[0]<<endl;
+	for(DOMElement* pChild = pInstanceElement->getFirstElementChild(); pChild!=0; pChild = pChild->getNextElementSibling())
+	{
+		string attr_part = XMLString::transcode(pChild->getAttribute(L"Name"));//Attribute lesen
+		for(DOMElement* pChild_part = pChild->getFirstElementChild(); pChild_part!=0; pChild_part = pChild_part->getNextElementSibling())
+		{
+			string name_child_part = XMLString::transcode(pChild_part->getTagName());
+			if(name_child_part.compare("Attribute")==0)
+			{
+				child_frame.Name = attr_part;
+				for(DOMElement * pAttr = pChild_part->getFirstElementChild(); pAttr!=0; pAttr=pAttr->getNextElementSibling())
+				{
+					attr_part = XMLString::transcode(pAttr->getAttribute(L"Name"));
+					DOMElement * pValue = pAttr->getFirstElementChild();
+					string text = XMLString::transcode(pValue->getTextContent());// Value von der Axis lesen
+					const char * c = text.c_str();
+					value = atof(c);
+					// die Value in die struct store
+					if (attr_part.compare("x") == 0 )
+					{
+						child_frame.x = value;
+					}
+					else if (attr_part.compare("y") == 0 )
+					{
+						child_frame.y = value;
+					}
+					else if (attr_part.compare("z") == 0 )
+					{
+						child_frame.z = value;
+					}
+					else if (attr_part.compare("rx") == 0 )
+					{
+						child_frame.rx = value;
+					}
+					else if (attr_part.compare("ry") == 0 )
+					{
+						child_frame.ry = value;
+					}
+					else if (attr_part.compare("rz") == 0 )
+					{
+						child_frame.rz = value;
+						v.push_back(child_frame);
+					}
+				}
+			}
+		}
+	}
+
+	/// Aufrufen der Import-Funktion für die einzelnen Koordinaten
+	for (int i=0; i<v.size(); i++)
+	{
+		log<<"we WANG TO KNOW IF IT what is v name:"<<v[i].Name<< endl;
+		if (v[i].Name.compare(parts[1]) == 0)
+		{
+			log<<"we WANG TO KNOW IF IT ENTERS:"<< endl;
+			ProStringToWstring(proname,"kran_frame_x");
+			import(proname, v[i].x);
+
+			ProStringToWstring(proname,"kran_frame_y");
+			import(proname, v[i].y);
+
+			ProStringToWstring(proname,"kran_frame_z");
+			import(proname, v[i].z);
+
+			ProStringToWstring(proname,"kran_frame_rx");
+			import(proname, v[i].rx);
+
+			ProStringToWstring(proname,"kran_frame_ry");
+			import(proname, v[i].ry);
+
+			ProStringToWstring(proname,"kran_frame_rz");
+			import(proname, v[i].rz);
+		}else if (v[i].Name.compare(parts[2]) == 0)
+		{
+			ProStringToWstring(proname,"Sortierstrecke_frame_x");
+			import(proname, v[i].x);
+
+			ProStringToWstring(proname,"Sortierstrecke_frame_y");
+			import(proname, v[i].y);
+
+			ProStringToWstring(proname,"Sortierstrecke_frame_z");
+			import(proname, v[i].z);
+
+			ProStringToWstring(proname,"Sortierstrecke_frame_rx");
+			import(proname, v[i].rx);
+
+			ProStringToWstring(proname,"Sortierstrecke_frame_ry");
+			import(proname, v[i].ry);
+
+			ProStringToWstring(proname,"Sortierstrecke_frame_rz");
+			import(proname, v[i].rz);
+		}else if (v[i].Name.compare(parts[3]) == 0)
+		{
+			ProStringToWstring(proname,"Stapel_frame_x");
+			import(proname, v[i].x);
+
+			ProStringToWstring(proname,"Stapel_frame_y");
+			import(proname, v[i].y);
+
+			ProStringToWstring(proname,"Stapel_frame_z");
+			import(proname, v[i].z);
+
+			ProStringToWstring(proname,"Stapel_frame_rx");
+			import(proname, v[i].rx);
+
+			ProStringToWstring(proname,"Stapel_frame_ry");
+			import(proname, v[i].ry);
+
+			ProStringToWstring(proname,"Stapel_frame_rz");
+			import(proname, v[i].rz);
+		}else if (v[i].Name.compare(parts[4]) == 0)
+		{
+			ProStringToWstring(proname,"Stempel_frame_x");
+			import(proname, v[i].x);
+
+			ProStringToWstring(proname,"Stempel_frame_y");
+			import(proname, v[i].y);
+
+			ProStringToWstring(proname,"Stempel_frame_z");
+			import(proname, v[i].z);
+
+			ProStringToWstring(proname,"Stempel_frame_rx");
+			import(proname, v[i].rx);
+
+			ProStringToWstring(proname,"Stempel_frame_ry");
+			import(proname, v[i].ry);
+
+			ProStringToWstring(proname,"Stempel_frame_rz");
+			import(proname, v[i].rz);
+		}else if (v[i].Name.compare(parts[5]) == 0)
+		{
+			ProStringToWstring(proname,"Montageplatte_frame_x");
+			import(proname, v[i].x);
+
+			ProStringToWstring(proname,"Montageplatte_frame_y");
+			import(proname, v[i].y);
+
+			ProStringToWstring(proname,"Montageplatte_frame_z");
+			import(proname, v[i].z);
+
+			ProStringToWstring(proname,"Montageplatte_frame_rx");
+			import(proname, v[i].rx);
+
+			ProStringToWstring(proname,"Montageplatte_frame_ry");
+			import(proname, v[i].ry);
+
+			ProStringToWstring(proname,"Montageplatte_frame_rz");
+			import(proname, v[i].rz);
+		}
+	}
+
+	return 0;
+
+}
+
+string match_pattern(wchar_t* text)
+{
+	string pattern = "[[:alpha:]]*";
+	wstring wstr = text;
+	string str;
+	str.assign(wstr.begin(), wstr.end());
+	//g << str;
+
+	string submatch;
+	regex r(pattern, regex::icase);
+	smatch results;
+	if(regex_search(str, results, r))
+	{
+		submatch = results.str();
+	}
+	else{ submatch = "empty!!!!!!!";
+	}
+
+	return submatch;
+}
+
+string w2string(wchar_t* text)
+{
+	wstring wstr = text;
+	string str;
+	str.assign(wstr.begin(), wstr.end());
+	return str;
+}
+
+vector<string> delRep(vector<string> vecSrc)
+{
+	vector<string> vecTag;
+	size_t num_elem = vecSrc.size();
+	string name_asm = vecSrc[0];
+	vecTag.push_back(name_asm);
+	for(int i = 1; i< num_elem; i++)
+	{
+		if(name_asm != vecSrc[i])
+		{
+			name_asm = vecSrc[i];
+			vecTag.push_back(name_asm);
+		}
+	}
+
+	return vecTag;
+}
+
+void addTrees(TreeNode **Node, ProMdl p_model, map<ProMdlfileType, string> typeHash)
+{
+	std::ofstream log("addtrees.log",std::ofstream::app);
+	ProError error;
+	ProMdlnameShortdata *depd;
+	ProMdlfileType * files;
+	int num_pdep;
+	error = ProMdlDependenciesCleanup(p_model);
+	error = ProMdlDependenciesDataList(p_model, &depd, &files, &num_pdep);
+
+	for(int i = 0; i < num_pdep; i++)
+	{
+		(*Node)->appendChild(new TreeNode(w2string((depd+i)->name), typeHash[*(files+i)]));
+		TreeNode *child = (*Node)->getChild(i);
+
+		error = ProMdlnameRetrieve((depd+i)->name, *(files+i), &p_model);//retrieve current modle from name and type
+
+		if(typeHash[*(files+i)] == prt_name)
+			continue;
+		else
+			addTrees(&child, p_model, typeHash);//recursivel generatetree
+	}
+}
+
+int SequenceSearch(const vector<string> &part_names, string Paraname)
+{
+	int i;
+	int size = part_names.size();
+	for(i=0; i<size; i++)
+		if(part_names[i]==Paraname)
+			return i-1;
+	return -1;
+}
+
+
+void writeAml(TreeNode* filetree, vector<NAMES> v, vector<string> parts, double **axisNumber, int c)
+{
+	/// Xerces initiieren 
+	//XMLPlatformUtils::Initialize();
+	ofstream log("writeaml.log", ofstream::app);
+	log << "initiating the platform"<< std::endl;
+
+	xercesc::XMLPlatformUtils::Initialize();
+	XMLCh gLS[] = { chLatin_L, chLatin_S, chNull };
+	DOMImplementation* impl =  DOMImplementationRegistry::getDOMImplementation(gLS);
+
+	DOMDocument *pDOMDocument = NULL;
+	// leeres DOMDocument wird erstellt
+	//XMLCh axises[6] = {L"x", L"y"}//, L"y", L"z", L"rx", L"ry", L"rz"};
+
+	///DOMDocument erstellen und Rootelement festlegen
+	pDOMDocument = impl->createDocument(0, L"CAEXFile", 0);	// Root erstellen
+	DOMElement * pRootElement = NULL;															
+	pRootElement = pDOMDocument->getDocumentElement();// File name als Child von Rootelement festlegen
+	pRootElement->setAttribute(L"FileName", L"PPU.aml");   
+	pRootElement->setAttribute(L"SchemaVersion", L"2.15");
+	DOMElement * pInstanceElement = NULL;	
+
+	XMLCh *InstanceName = XMLString::transcode(parts[0].c_str());
+	pInstanceElement = pDOMDocument->createElement(L"InstanceHierarchy"); //InstanceHierarchy erstellen
+	pInstanceElement->setAttribute(L"Name", InstanceName);
+	XMLString::release(&InstanceName);
+	pRootElement->appendChild(pInstanceElement); // die InstanceHierarchy und File verbinden
+
+	saveInternalElement(filetree, pDOMDocument, &pInstanceElement, log, parts,axisNumber);
+	//generate DOM trees of all models
+
+	/// xml datei schreiben
+	DOMLSSerializer *writer = ((DOMImplementationLS*)impl)->createLSSerializer();
+	DOMLSOutput *theOutputDesc = ((DOMImplementationLS*)impl)->createLSOutput();
+	XMLFormatTarget *formTarget = new LocalFileFormatTarget((XMLCh*)L"..\\..\\files\\newexport.aml");
+	cout<<"E:\\cad_Li\\files\\newexport.xml"<<endl;
+
+	theOutputDesc->setByteStream(formTarget);
+	writer->getDomConfig()->setParameter(L"format-pretty-print", true);
+	writer->write(pDOMDocument, theOutputDesc);
+}
+
+void saveInternalElement(TreeNode* filetree, DOMDocument *pDOMDocument, DOMElement **pInstanceElement, ofstream &log,
+						 vector<string> parts, double **axisNumber)
+{
+	DOMElement * pChild = NULL;
+	DOMElement * pAttr1 = NULL;
+	DOMElement * pAttr2 = NULL;
+	DOMElement * pValue = NULL;
+	DOMText* pTextNode = NULL;
+	string axises[] = {"x","y","z","rx","ry","rz",};
+
+	string child_name;
+	int paraind = 0;
+	//vector<TreeNode *> children = filetree->getChild;
+	for(int i = 0; i < filetree->childrenNumber(); i++)
+	{
+		TreeNode *child = filetree->getChild(i);
+		child_name = child->getTextContent();
+		pChild = pDOMDocument->createElement(L"InternalElement");
+		log<<"creating name attribute: "<< child_name << endl;
+		pChild->setAttribute(L"Name", s2wc(child_name));
+		log<<"creating type attribute: "<< child->getType() << endl;
+		pChild->setAttribute(L"Type", s2wc(child->getType()));
+
+		//set the frame and its axies
+		paraind = SequenceSearch(parts, child_name);
+		if(paraind != -1)
+		{
+			pAttr1 = pDOMDocument->createElement(L"Attribute");
+			pAttr1->setAttribute(L"Name", L"Frame");
+			for(int j = 0; j < 6; j++)
+			{
+				//Attribute
+				pAttr2 = pDOMDocument->createElement(L"Attribute");
+				pAttr2->setAttribute(L"AttributeDataType", L"xs:double");
+				pAttr2->setAttribute(L"Name", s2wc(axises[j]));
+
+				pValue = pDOMDocument->createElement(L"Value");
+				pTextNode=pDOMDocument->createTextNode(d2wc(axisNumber[j][paraind])); //Text Node erstellen
+				pValue->appendChild(pTextNode); //Node verbinden
+				pAttr2->appendChild(pValue);
+				pAttr1->appendChild(pAttr2);
+				pChild->appendChild(pAttr1);
+			}
+
+			// ====*** if you want only generate modle trees only for parameters matched models to DOM trees, uncomment lines below
+
+			(*pInstanceElement)->appendChild(pChild);
+			if(child->hasChildren())
+				saveInternalElement(child, pDOMDocument, &pChild, log, parts, axisNumber);
+			else
+				continue;
+
+			// ====***
+		}
+
+		// ====*** if you want generate whole modle trees to DOM trees, uncomment lines below
+
+		/*(*pInstanceElement)->appendChild(pChild);
+		if(child->hasChildren())
+		saveInternalElement(child, pDOMDocument, &pChild, log, parts, axisNumber);
+		else
+		continue;*/
+
+		// ====***
+
+	}
+	//delete pChild;
+
+}
 
 
 /// Funktion für den Export der Dateien
@@ -474,113 +807,114 @@ uiCmdCmdActFn Parameter_export(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 	ProModelitem p_model_item; 
 	ProParameter param;
 	ProParamvalue provalue;
-	ProParamvalueType protype;
+	//	ProParamvalueType protype;
+	ProMdlType promdltype = ProMdlType::PRO_MDL_ASSEMBLY; //= PRO_ASSEMBLY;
+	ProMdl  *p_model_array = NULL;
+
+	// define a hash to represent promdlfiletype as normal string
+	map<ProMdlfileType, string> typeHash;
+	typeHash[ProMdlfileType::PRO_MDLFILE_ASSEMBLY] = asm_name;
+	typeHash[ProMdlfileType::PRO_MDLFILE_PART] = prt_name;
+
 	vector<Values> values;
-	string parts[] = {"PPU","Kran", "Sortierstrecke", "Stapel", "Stempel", "Montageplatte"};
+	vector<string> parts;
+	//	string parts[] = {"PPU","Kran", "Sortierstrecke", "Stapel", "Stempel", "Montageplatte"};
 
-	/// Xerces initiieren 
-	XMLPlatformUtils::Initialize();
-	xercesc::XMLPlatformUtils::Initialize();
-	XMLCh gLS[] = { chLatin_L, chLatin_S, chNull };
-    DOMImplementation* impl =  DOMImplementationRegistry::getDOMImplementation(gLS);
+	///Export the model
+	error = ProMdlCurrentGet(&p_model);
+	if (error != 0)
+	{
+		log << "ProMdlCurrentGet returned" << error << std::endl;
+	}
+
+	ProMdlName test_name;
+	error = ProMdlMdlnameGet(p_model, test_name);
+	parts.push_back(match_pattern(test_name));
+	TreeNode *mdltree =new TreeNode(w2string(test_name), typeHash[ProMdlfileType::PRO_MDLFILE_ASSEMBLY]);
+	//error = ProSessionMdlList(promdltype, &p_model_array, &p_model_num);
+
+	ProMdlnameShortdata *depd = NULL;
+	ProMdlfileType * files = NULL;
+	int num_pdep = 0;
+	error = ProMdlDependenciesDataList(p_model, &depd, &files, &num_pdep);
+
+	log<<"the third test"<< endl;
+
+	string bauObject;
+	string delimiter = "[[:alpha:]]*";
+	for(int i = 0; i<num_pdep; i++)
+	{
+		wcscpy(test_name, (*(depd+i)).name);
+		bauObject = match_pattern(test_name);
+		parts.push_back(bauObject);
+		log<< "the name is  " << bauObject << std::endl;
+	}
 	
-	///Vektor in dem alle Parameternamen gespeichert werden
-	struct NAMES {   
-    string Name;     
-    wchar_t* x; 
-	wchar_t* y; 
-	wchar_t* z; 
-	wchar_t* rx; 
-	wchar_t* ry; 
-	wchar_t* rz; 
-	} names;
+	parts = delRep(parts);//delete all repetetive parts
 
-	log << "InstanceName is: "<< parts[0]<< endl;
 	vector<NAMES> v;
 	int c = 5;
 
-	log<<"let us see how this change: "<<c<<endl;
-
-	names.Name	= parts[1];
-	names.x		= L"Kran_x";
-	names.y		= L"kran_y";
-	names.z		= L"kran_z";
-	names.rx	= L"kran_rx";
-	names.ry	= L"kran_ry";
-	names.rz	= L"kran_rz";
-
-	v.push_back(names);
-
 	names.Name	= parts[2];
-	names.x		= L"Sortierstrecke_x";
-	names.y		= L"Sortierstrecke_y";
-	names.z		= L"Sortierstrecke_z";
-	names.rx	= L"Sortierstrecke_rx";
-	names.ry	= L"Sortierstrecke_ry";
-	names.rz	= L"Sortierstrecke_rz";
-	
+	names.x		= L"Kran_frame_x";
+	names.y		= L"kran_frame_y";
+	names.z		= L"kran_frame_z";
+	names.rx	= L"kran_frame_rx";
+	names.ry	= L"kran_frame_ry";
+	names.rz	= L"kran_frame_rz";
 
 	v.push_back(names);
 
 	names.Name	= parts[3];
-	names.x		= L"Stapel_x";
-	names.y		= L"Stapel_y";
-	names.z		= L"Stapel_z";
-	names.rx	= L"Stapel_rx";
-	names.ry	= L"Stapel_ry";
-	names.rz	= L"Stapel_rz";
+	names.x		= L"Sortierstrecke_frame_x";
+	names.y		= L"Sortierstrecke_frame_y";
+	names.z		= L"Sortierstrecke_frame_z";
+	names.rx	= L"Sortierstrecke_frame_rx";
+	names.ry	= L"Sortierstrecke_frame_ry";
+	names.rz	= L"Sortierstrecke_frame_rz";
+
+
+	v.push_back(names);
+
+	names.Name	= parts[4];
+	names.x		= L"Stapel_frame_x";
+	names.y		= L"Stapel_frame_y";
+	names.z		= L"Stapel_frame_z";
+	names.rx	= L"Stapel_frame_rx";
+	names.ry	= L"Stapel_frame_ry";
+	names.rz	= L"Stapel_frame_rz";
 
 	v.push_back(names);
 
 
-	names.Name	=parts[4];
-	names.x		= L"Stempel_x";
-	names.y		= L"Stempel_y";
-	names.z		= L"Stempel_z";
-	names.rx	= L"Stempel_rx";
-	names.ry	= L"Stempel_ry";
-	names.rz	= L"Stempel_rz";
+	names.Name	=parts[5];
+	names.x		= L"Stempel_frame_x";
+	names.y		= L"Stempel_frame_y";
+	names.z		= L"Stempel_frame_z";
+	names.rx	= L"Stempel_frame_rx";
+	names.ry	= L"Stempel_frame_ry";
+	names.rz	= L"Stempel_frame_rz";
 
 	v.push_back(names);
 
-	names.Name	= parts[5];
-	names.x		= L"Montageplatte_x";
-	names.y		= L"Montageplatte_y";
-	names.z		= L"Montageplatte_z";
-	names.rx	= L"Montageplatte_rx";
-	names.ry	= L"Montageplatte_ry";
-	names.rz	= L"Montageplatte_rz";
+	names.Name	= parts[1];
+	names.x		= L"Montageplatte_frame_x";
+	names.y		= L"Montageplatte_frame_y";
+	names.z		= L"Montageplatte_frame_z";
+	names.rx	= L"Montageplatte_frame_rx";
+	names.ry	= L"Montageplatte_frame_ry";
+	names.rz	= L"Montageplatte_frame_rz";
 
 	v.push_back(names);
-    log<<"let us see waht in the  part: "<<parts[5]<<endl;
 
-
-	/*names.Name	= "xPPU_UseCase1";
-	names.x		= L"usecase_x";
-	names.y		= L"usecase_y";
-	names.z		= L"usecase_z";
-	names.rx	= L"usecase_rx";
-	names.ry	= L"usecase_ry";
-	names.rz	= L"usecase_rz";
-
-	v.push_back(names);*/
-
-
-
-	error = ProMdlCurrentGet(&p_model);
+	error = ProMdlToModelitem(p_model,&p_model_item);
 	if (error != 0)
 	{
-	log << "ProMdlCurrentGet returned" << error << std::endl;
+		log << "ProMdlToModelitem returned" << error << std::endl;
 	}
-	
-		error = ProMdlToModelitem(p_model,&p_model_item);
-	if (error != 0)
-	{
-	log << "ProMdlToModelitem returned" << error << std::endl;
-	}
+
+	//define a 2d arrays to store all parameters 
 	int num_axis = 6;
-	log << "ProMdlCurrentGet returned" << std::endl;
-
 	double **axisNumber;  
 	axisNumber = new double *[num_axis];  
 	for(int i=0;i<num_axis;i++)  
@@ -590,7 +924,6 @@ uiCmdCmdActFn Parameter_export(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 	}  
 	//double axisNumber[6][4];
 	//double x[5],y[5],z[5],rx[5],ry[5],rz[5];
-	log << "ProMdlCurrentGet returned" << axisNumber[0][0] << std::endl;
 
 	/// Parameterwerte werden eingelesen, in arrays gespeichert und in xml-Datei füllen
 	for(int i=0;i<c;i++)
@@ -599,273 +932,106 @@ uiCmdCmdActFn Parameter_export(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 		error=	ProParameterInit(&p_model_item,v[i].x , &param);
 		if (error != 0)
 		{
-		log << "ProParameterInit returned" << error << std::endl;
+			log << "ProParameterInit returned" << error << std::endl;
 		}
 
-		
-		ProParameterValueGet	(&param, &provalue);
+
+		error = ProParameterValueGet	(&param, &provalue);
 		if (error != 0)
 		{
-		log << "ProParameterValueGet" << error << std::endl;
+			log << "ProParameterValueGet" << error << std::endl;
 		}
 
+		axisNumber[0][i] = provalue.value.d_val;
 
-		ProParamvalueTypeGet	(&provalue, &protype);
-		if (error != 0)
-		{
-		log << "ProParamvalueTypeGet" << error << std::endl;
-		}
-
-		ProParamvalueValueGet	(&provalue, protype, &axisNumber[0][i]);
-		if (error != 0)
-		{
-		log << "ProParamvalueValueGet" << error << std::endl;
-		}
-
-		
 		///y
 		error=	ProParameterInit(&p_model_item,v[i].y , &param);
 		if (error != 0)
 		{
-		log << "ProParameterInit returned" << error << std::endl;
+			log << "ProParameterInit returned" << error << std::endl;
 		}
 
-	
 		ProParameterValueGet	(&param, &provalue);
 		if (error != 0)
 		{
-		log << "ProParameterValueGet" << error << std::endl;
+			log << "ProParameterValueGet" << error << std::endl;
 		}
 
+		axisNumber[1][i] = provalue.value.d_val;
 
-		ProParamvalueTypeGet	(&provalue, &protype);
-		if (error != 0)
-		{
-		log << "ProParamvalueTypeGet" << error << std::endl;
-		}
 
-		ProParamvalueValueGet	(&provalue, protype, &axisNumber[1][i]);
-		if (error != 0)
-		{
-		log << "ProParamvalueValueGet" << error << std::endl;
-		}
-	
-		
 		///z
 		error=	ProParameterInit(&p_model_item,v[i].z , &param);
 		if (error != 0)
 		{
-		log << "ProParameterInit returned" << error << std::endl;
+			log << "ProParameterInit returned" << error << std::endl;
 		}
 
 
 		ProParameterValueGet	(&param, &provalue);
 		if (error != 0)
 		{
-		log << "ProParameterValueGet" << error << std::endl;
+			log << "ProParameterValueGet" << error << std::endl;
 		}
 
+		axisNumber[2][i] = provalue.value.d_val;
 
-		ProParamvalueTypeGet	(&provalue, &protype);
-		if (error != 0)
-		{
-		log << "ProParamvalueTypeGet" << error << std::endl;
-		}
-
-		ProParamvalueValueGet	(&provalue, protype, &axisNumber[2][i]);
-		if (error != 0)
-		{
-		log << "ProParamvalueValueGet" << error << std::endl;
-		}
-	
-		
 		///rx
 		error=	ProParameterInit(&p_model_item,v[i].rx , &param);
 		if (error != 0)
 		{
-		log << "ProParameterInit returned" << error << std::endl;
+			log << "ProParameterInit returned" << error << std::endl;
 		}
 
 
 		ProParameterValueGet	(&param, &provalue);
 		if (error != 0)
 		{
-		log << "ProParameterValueGet" << error << std::endl;
+			log << "ProParameterValueGet" << error << std::endl;
 		}
 
+		axisNumber[3][i] = provalue.value.d_val;
 
-		ProParamvalueTypeGet	(&provalue, &protype);
-		if (error != 0)
-		{
-		log << "ProParamvalueTypeGet" << error << std::endl;
-		}
-
-		ProParamvalueValueGet	(&provalue, protype, &axisNumber[3][i]);
-		if (error != 0)
-		{
-		log << "ProParamvalueValueGet" << error << std::endl;
-		}
-	
-		
 		///ry
 		error=	ProParameterInit(&p_model_item,v[i].ry , &param);
 		if (error != 0)
 		{
-		log << "ProParameterInit returned" << error << std::endl;
+			log << "ProParameterInit returned" << error << std::endl;
 		}
 
-	
+
 		ProParameterValueGet	(&param, &provalue);
 		if (error != 0)
 		{
-		log << "ProParameterValueGet" << error << std::endl;
+			log << "ProParameterValueGet" << error << std::endl;
 		}
 
+		axisNumber[4][i] = provalue.value.d_val;
 
-		ProParamvalueTypeGet	(&provalue, &protype);
-		if (error != 0)
-		{
-		log << "ProParamvalueTypeGet" << error << std::endl;
-		}
-
-		ProParamvalueValueGet	(&provalue, protype, &axisNumber[4][i]);
-		if (error != 0)
-		{
-		log << "ProParamvalueValueGet" << error << std::endl;
-		}
-	
 
 		///rz
 		error=	ProParameterInit(&p_model_item,v[i].rz , &param);
 		if (error != 0)
 		{
-		log << "ProParameterInit returned" << error << std::endl;
+			log << "ProParameterInit returned" << error << std::endl;
 		}
-		
-	
+
+
 		ProParameterValueGet	(&param, &provalue);
 		if (error != 0)
 		{
-		log << "ProParameterValueGet" << error << std::endl;
+			log << "ProParameterValueGet" << error << std::endl;
 		}
-
-
-		ProParamvalueTypeGet	(&provalue, &protype);
-		if (error != 0)
-		{
-		log << "ProParamvalueTypeGet" << error << std::endl;
-		}
-
-		
-		ProParamvalueValueGet	(&provalue, protype, &axisNumber[5][i]);
-		if (error != 0)
-		{
-		log << "ProParamvalueValueGet" << error << std::endl;
-		}
-		}
-	///DOM
-	log << "what step it comes" << std::endl;
-
-	DOMText* pTextNode = NULL;
-	DOMText* pTextNode1 = NULL;
-	DOMText* pTextNode2 = NULL;
-	DOMText* pTextNode3 = NULL;
-	DOMText* pTextNode4 = NULL;
-	DOMText* pTextNode5 = NULL;
-	DOMText* pTextNode6 = NULL;
-	DOMElement * pChild = NULL;	
-	DOMElement * pAttr1 = NULL;
-	DOMElement * pAttr2 = NULL;
-	DOMElement * pValue = NULL;
-
-	DOMElement * pExt = NULL;
-	DOMElement * pAttr_ext = NULL;
-	
-
-	DOMDocument *pDOMDocument = NULL;
-	string axises[] = {"x","y","z","rx","ry","rz",}; // leeres DOMDocument wird erstellt
-	//XMLCh axises[6] = {L"x", L"y"}//, L"y", L"z", L"rx", L"ry", L"rz"};
-
-	///DOMDocument erstellen und Rootelement festlegen
-
-	pDOMDocument = impl->createDocument(0, L"CAEXFile", 0);							// Frame-Element erstellen
-	log << 3<< std::endl;
-	DOMElement * pRootElement = NULL;															// Frame als Rootelement festlegen
-	pRootElement = pDOMDocument->getDocumentElement();
-	pRootElement->setAttribute(L"FileName", L"PPU.aml");
-	pRootElement->setAttribute(L"SchemaVersion", L"2.15");
-	log << 4<< std::endl;
-	DOMElement * pInstanceElement = NULL;	
-
-	XMLCh *InstanceName = XMLString::transcode(parts[0].c_str());
-	pInstanceElement = pDOMDocument->createElement(L"InstanceHierarchy");
-	pInstanceElement->setAttribute(L"Name", InstanceName);
-	XMLString::release(&InstanceName);
-	pRootElement->appendChild(pInstanceElement);
-	log << 5<< std::endl;
-
-	std::wstring s;
-	std::basic_ostringstream<wchar_t> oss;
-	
-
-		///  Modulknoten erstellen												
-		
-
-
-		/// Kinder der Module erstellen und Werte einfügen
-	for(int i=0; i<c; i++)
-	{
-
-		pChild = pDOMDocument->createElement(L"InternalElement");
-		pChild->setAttribute(L"Name", s2wc(v[i].Name));
-		//Attribute
-		pAttr1 = pDOMDocument->createElement(L"Attribute");
-		pAttr1->setAttribute(L"Name", L"Frame");
-		for(int j=0; j<6; j++){
-			pAttr2 = pDOMDocument->createElement(L"Attribute");
-			pAttr2->setAttribute(L"AttributeDataType", L"xs:double");
-			pAttr2->setAttribute(L"Name", s2wc(axises[j]));
-			pValue = pDOMDocument->createElement(L"Value");
-			pTextNode=pDOMDocument->createTextNode(d2wc(axisNumber[j][i]));
-			pValue->appendChild(pTextNode);
-			pAttr2->appendChild(pValue);
-			pAttr1->appendChild(pAttr2);
-		}
-		pChild->appendChild(pAttr1);
-
-		//ExternalInterface
-		pExt = pDOMDocument->createElement(L"ExternalInterface");
-		string name_ext = "COLLADAInterface_" + parts[i+1];
-		pExt->setAttribute(L"Name", s2wc(name_ext));
-		pAttr_ext = pDOMDocument->createElement(L"Attribute");
-		pAttr_ext->setAttribute(L"Name", L"refRUI");
-		pAttr_ext->setAttribute(L"AttributeDataType", L"xs:anyURI");
-		pValue = pDOMDocument->createElement(L"Value");
-		string name_text = parts[i+1]+".dae";
-		pTextNode = pDOMDocument->createTextNode(s2wc(name_text));
-		pValue->appendChild(pTextNode);
-		pAttr_ext->appendChild(pValue);
-		pExt->appendChild(pAttr_ext);
-		pChild->appendChild(pExt);
-
-		pInstanceElement->appendChild(pChild);
-		
+		axisNumber[5][i] = provalue.value.d_val;
 	}
+
+	//generate model tree
+	addTrees(&mdltree, p_model, typeHash);
 	
-
-	
-
-	/// xml datei schreiben
-
-	DOMLSSerializer *writer = ((DOMImplementationLS*)impl)->createLSSerializer();
-	DOMLSOutput *theOutputDesc = ((DOMImplementationLS*)impl)->createLSOutput();
-	XMLFormatTarget *formTarget = new LocalFileFormatTarget((XMLCh*)L"..\\..\\files\\export.aml");
-
-	theOutputDesc->setByteStream(formTarget);
-	writer->getDomConfig()->setParameter(L"format-pretty-print",true);
-	writer->write(pDOMDocument, theOutputDesc);
+	// generate and write AML file to local disk
+	writeAml(mdltree, v, parts, axisNumber, c);
 
 	return 0;
-	
+
 }
 
