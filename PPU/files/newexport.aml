@@ -2,7 +2,7 @@
 <CAEXFile FileName="PPU.aml" SchemaVersion="2.15">
 
   <InstanceHierarchy Name="PPU">
-    <InternalElement Name="KRAN">
+    <InternalElement Name="MONTAGEPLATTE" Type="ASM">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>-100.179000</Value>
@@ -24,7 +24,7 @@
         </Attribute>
       </Attribute>
     </InternalElement>
-    <InternalElement Name="SORTIERSTRECKE">
+    <InternalElement Name="KRAN" Type="ASM">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>0.000000</Value>
@@ -46,7 +46,7 @@
         </Attribute>
       </Attribute>
     </InternalElement>
-    <InternalElement Name="STAPEL">
+    <InternalElement Name="SORTIERSTRECKE" Type="ASM">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>0.000000</Value>
@@ -68,7 +68,7 @@
         </Attribute>
       </Attribute>
     </InternalElement>
-    <InternalElement Name="STEMPEL">
+    <InternalElement Name="STAPEL" Type="ASM">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>0.000000</Value>
@@ -90,7 +90,7 @@
         </Attribute>
       </Attribute>
     </InternalElement>
-    <InternalElement Name="MONTAGEPLATTE">
+    <InternalElement Name="STEMPEL" Type="ASM">
       <Attribute Name="Frame">
         <Attribute AttributeDataType="xs:double" Name="x">
           <Value>-72.831000</Value>
