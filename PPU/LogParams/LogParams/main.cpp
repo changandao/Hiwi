@@ -141,7 +141,7 @@ void import(ProName name, double value)
 	}
 
 	/// ProParameter initiieren
-	error=	ProParameterInit(&p_model_item,name , &param);
+	error=	ProParameterInit(&p_model_item, name , &param);
 	if (error != 0)
 	{
 		log << "ProParameterInit returned" << error << std::endl;
@@ -172,7 +172,6 @@ void import(ProName name, double value)
 
 
 }
-/// struct, in dem Name und Koordinatenwerte gespeichert werden
 
 /// Funktion zur Umwandlung von double zu wchar_t*
 const wchar_t* d2wc(double value){
@@ -233,7 +232,7 @@ uiCmdCmdActFn Parameter_import(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 	DOMElement * pAttr2 = NULL;
 	DOMElement * pValue = NULL;
 	DOMDocument *pDOMDocument = NULL;
-	string axises[] = {"x","y","z","rz","ry","rz",}; 
+	string axises[] = {"x","y","z","rz","ry","rz"}; 
 	string parts[] = {"PPU","Kran", "Sortierstrecke", "Stapel", "Stempel", "Montageplatte"};
 	int num_elem = 0;
 	/// Vektor vom Typ Frame in dem alle Werte gespeichert werden
@@ -622,6 +621,28 @@ string match_pattern(wchar_t* text)
 	return submatch;
 }
 
+string match_axis(wchar_t* text)
+{
+	ofstream log("match_axis.log", ofstream::app);
+	string pattern = "[[:alpha:]]*$";
+	wstring wstr = text;
+	string str;
+	str.assign(wstr.begin(), wstr.end());
+	//g << str;
+
+	string submatch;
+	regex r(pattern, regex::icase);
+	smatch results;
+	if(regex_search(str, results, r))
+	{
+		submatch = results.str();
+	}
+	else{ submatch = "empty!!!!!!!";
+	}
+	log << "========= "<<submatch<<endl;
+	return submatch;
+}
+
 string w2string(wchar_t* text)
 {
 	wstring wstr = text;
@@ -672,12 +693,27 @@ void addTrees(TreeNode **Node, ProMdl p_model, map<ProMdlfileType, string> typeH
 	}
 }
 
+string strToLower(const string &str)
+{
+	string strTmp = str;
+	transform(strTmp.begin(),strTmp.end(),strTmp.begin(),tolower);
+	return strTmp;
+}
+
+// string.compareNoCase
+bool compareNoCase(const string &strA,const string &strB)
+{
+	string str1 = strToLower(strA);
+	string str2 = strToLower(strB);
+	return (str1 == str2);
+}
+
 int SequenceSearch(const vector<string> &part_names, string Paraname)
 {
 	int i;
 	int size = part_names.size();
 	for(i=0; i<size; i++)
-		if(part_names[i]==Paraname)
+		if(compareNoCase(part_names[i], Paraname))
 			return i-1;
 	return -1;
 }
@@ -714,16 +750,19 @@ void writeAml(TreeNode* filetree, vector<NAMES> v, vector<string> parts, double 
 
 	saveInternalElement(filetree, pDOMDocument, &pInstanceElement, log, parts,axisNumber);
 	//generate DOM trees of all models
-
+	
 	/// xml datei schreiben
 	DOMLSSerializer *writer = ((DOMImplementationLS*)impl)->createLSSerializer();
 	DOMLSOutput *theOutputDesc = ((DOMImplementationLS*)impl)->createLSOutput();
 	XMLFormatTarget *formTarget = new LocalFileFormatTarget((XMLCh*)L"..\\..\\files\\newexport.aml");
 	cout<<"E:\\cad_Li\\files\\newexport.xml"<<endl;
 
+	log << "#### this is second test ###"<<endl;
+
 	theOutputDesc->setByteStream(formTarget);
 	writer->getDomConfig()->setParameter(L"format-pretty-print", true);
 	writer->write(pDOMDocument, theOutputDesc);
+	/*delete formTarget;*/
 }
 
 void saveInternalElement(TreeNode* filetree, DOMDocument *pDOMDocument, DOMElement **pInstanceElement, ofstream &log,
@@ -748,6 +787,7 @@ void saveInternalElement(TreeNode* filetree, DOMDocument *pDOMDocument, DOMEleme
 		pChild->setAttribute(L"Name", s2wc(child_name));
 		log<<"creating type attribute: "<< child->getType() << endl;
 		pChild->setAttribute(L"Type", s2wc(child->getType()));
+		//pChild->setAttribute(L"RefBaseSystemUnitPath", "")
 
 		//set the frame and its axies
 		paraind = SequenceSearch(parts, child_name);
@@ -796,6 +836,59 @@ void saveInternalElement(TreeNode* filetree, DOMDocument *pDOMDocument, DOMEleme
 
 }
 
+vector<NAMES> getParaname(vector<string> parts, wchar_t **paraname)
+{
+	ofstream log("logmain.log", ofstream::app);
+	vector<NAMES> v(5,names);
+	string matchElement;
+	string lastmatch = "";//;match_pattern(paraname[0]);
+	string axis;
+	int part_num;
+	for(int ind = 0; ind < 30; ind++)
+	{
+
+		matchElement = match_pattern(paraname[ind]);
+		axis = match_axis(paraname[ind]);
+			if (axis.compare("x") == 0 )
+			{
+				names.x = paraname[ind];
+			}
+			else if (axis.compare("y") == 0 )
+			{
+				names.y = paraname[ind];
+			}
+			else if (axis.compare("z") == 0 )
+			{
+				names.z = paraname[ind];
+			}
+			else if (axis.compare("rx") == 0 )
+			{
+				names.rx = paraname[ind];
+			}
+			else if (axis.compare("ry") == 0 )
+			{
+				names.ry = paraname[ind];
+			}
+			else if (axis.compare("rz") == 0 )
+			{
+				names.rz = paraname[ind];
+				v.insert(v.begin()+part_num, names);
+			}
+		if(matchElement != lastmatch)
+		{
+			part_num = SequenceSearch(parts, matchElement);
+			if(part_num == -1)
+			{
+				log<<"vital error!!!!!!!!!!!!"<<endl;
+				break;
+			}
+		}
+		
+		lastmatch = matchElement;
+	}
+	return v;
+	
+}
 
 /// Funktion für den Export der Dateien
 uiCmdCmdActFn Parameter_export(uiCmdCmdId  command, uiCmdValue *p_value, void *p_push_command_data)
@@ -852,8 +945,46 @@ uiCmdCmdActFn Parameter_export(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 	
 	parts = delRep(parts);//delete all repetetive parts
 
-	vector<NAMES> v;
+	int n = parts.size()-1;
+
+	wchar_t* paraname[30] = {
+		L"Kran_frame_x", 
+		L"Kran_frame_y",
+		L"Kran_frame_z",
+		L"Kran_frame_rx",
+		L"Kran_frame_ry",
+		L"Kran_frame_rz",
+		L"Sortierstrecke_frame_x",
+		L"Sortierstrecke_frame_y",
+		L"Sortierstrecke_frame_z",
+		L"Sortierstrecke_frame_rx",
+		L"Sortierstrecke_frame_ry",
+		L"Sortierstrecke_frame_rz",
+		L"Stapel_frame_x",
+		L"Stapel_frame_y",
+		L"Stapel_frame_z",
+		L"Stapel_frame_rx",
+		L"Stapel_frame_ry",
+		L"Stapel_frame_rz",
+		L"Stempel_frame_x",
+		L"Stempel_frame_y",
+		L"Stempel_frame_z",
+		L"Stempel_frame_rx",
+		L"Stempel_frame_ry",
+		L"Stempel_frame_rz",
+		L"Montageplatte_frame_x",
+		L"Montageplatte_frame_y",
+		L"Montageplatte_frame_z",
+		L"Montageplatte_frame_rx",
+		L"Montageplatte_frame_ry",
+		L"Montageplatte_frame_rz"
+	};
+
+
+	vector<NAMES> v = getParaname(parts, paraname);
 	int c = 5;
+	/*vector<NAMES> v;
+	
 
 	names.Name	= parts[2];
 	names.x		= L"Kran_frame_x";
@@ -905,7 +1036,7 @@ uiCmdCmdActFn Parameter_export(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 	names.ry	= L"Montageplatte_frame_ry";
 	names.rz	= L"Montageplatte_frame_rz";
 
-	v.push_back(names);
+	v.push_back(names);*/
 
 	error = ProMdlToModelitem(p_model,&p_model_item);
 	if (error != 0)
@@ -1027,7 +1158,7 @@ uiCmdCmdActFn Parameter_export(uiCmdCmdId  command, uiCmdValue *p_value, void *p
 
 	//generate model tree
 	addTrees(&mdltree, p_model, typeHash);
-	
+	log<< "===this is a test===="<<endl;
 	// generate and write AML file to local disk
 	writeAml(mdltree, v, parts, axisNumber, c);
 

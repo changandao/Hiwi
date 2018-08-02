@@ -101,6 +101,9 @@ string w2string(wchar_t* text);
 string match_pattern(wchar_t* text);
 //find modle name without symbols like "_" and numbers
 
+string match_axis(wchar_t* text);
+//find axis name 
+
 vector<string> delRep(vector<string> vecSrc);
 //delete repetetive model names
 
@@ -116,5 +119,14 @@ void writeAml(TreeNode* filetree, vector<NAMES> v, vector<string> parts, double 
 void saveInternalElement(TreeNode* filetree, DOMDocument *pDOMDocument, DOMElement **pInstanceElement, ofstream &log,
 						 vector<string> parts, double **axisNumber);
 //generate DOM trees of all models
+
+vector<NAMES> getParaname(vector<string> parts, wchar_t **paraname);
+//get the parameter name from customer input arrays
+
+string strToLower(const string &str);
+//upper to lower 
+
+bool compareNoCase(const string &strA,const string &strB);
+//compare no case
 
 #endif
